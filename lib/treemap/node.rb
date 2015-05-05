@@ -10,7 +10,7 @@
 #
 #
 
-require "md5"
+require "digest/md5"
 
 module Treemap
     #
@@ -135,7 +135,7 @@ module Treemap
     private
         def make_id
             #XXX prob should change this. Create a better way to generate unique id's
-            @id = MD5.new([self.label, rand(100000000)].join("-")).hexdigest
+            @id = Digest::MD5.hexdigest([self.label, rand(100000000)].join("-"))
         end
     end
 end
