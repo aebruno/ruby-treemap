@@ -2,9 +2,9 @@ require 'rubygems'
 require 'rake'
 require 'rake/clean'
 require 'rake/testtask'
-require 'rake/rdoctask'
+require 'rdoc/task'
 require 'rake/packagetask'
-require 'rake/gempackagetask'
+require 'rubygems/package_task'
 
 $:.unshift(File.dirname(__FILE__) + "/lib")
 require 'treemap'
@@ -66,6 +66,6 @@ spec = Gem::Specification.new do |s|
     s.files = s.files + Dir.glob( "test/**/*" ).delete_if { |item| item.include?( "\.svn" ) }
 end
 
-Rake::GemPackageTask.new(spec) do |p|
+Gem::PackageTask.new(spec) do |p|
     p.need_tar = true
 end
