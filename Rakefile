@@ -51,7 +51,7 @@ spec = Gem::Specification.new do |s|
     s.version = PKG_VERSION
     s.author = "Andrew Bruno"
     s.email = "aeb@qnot.org"
-    s.homepage = "http://rubytreemap.rubyforge.org/"
+    s.homepage = "https://github.com/aebruno/ruby-treemap"
 
     s.has_rdoc = true
     s.extra_rdoc_files = [ "README", "EXAMPLES" ]
