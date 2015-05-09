@@ -2,7 +2,7 @@
 require "test/unit"
 require "treemap"
 begin
-    require "RMagick"
+    require "rmagick"
     require "treemap/image_output" 
     require "treemap/svg_output" 
 rescue LoadError

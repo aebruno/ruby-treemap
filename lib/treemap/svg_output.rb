@@ -11,7 +11,7 @@
 #
 
 require 'cgi'
-require 'RMagick'
+require 'rmagick'
 
 require File.dirname(__FILE__) + "/output_base"
 
