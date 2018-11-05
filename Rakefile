@@ -34,7 +34,7 @@ desc "Run unit tests"
 Rake::TestTask.new do |t|
     t.libs << "test"
     begin
-        require 'RMagick'
+        require 'rmagick'
         t.pattern = 'test/tc_*.rb'
     rescue LoadError
         t.test_files = ['tc_color.rb','tc_html.rb']
